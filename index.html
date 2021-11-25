@@ -1,0 +1,76 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Odometer With Visible Viewport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=No">
+    <link rel="stylesheet" type="text/css" href="css/odometer-theme-default.css">
+    <style type="text/css">
+
+    section {
+        padding: 50px 0;
+        text-align:center;
+        height:100vh;
+        font-size:22px;
+    }
+
+   
+    @keyframes duepduep {
+
+        0% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(-40px, 0);
+        }
+
+        75% {
+            transform: translate(0, 0);
+        }
+    }
+
+    
+    /* number-counter-section(odometer) */
+    .number-counter-section{
+        max-width: 550px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .number-counter-section .odometer{
+        font-size: 32px;
+        margin-right: 15px;
+    }
+    .number-counter-section .odometer:last-child{
+        margin: 0;
+    }
+    .number-counter-section .odometer .odometer-digit{
+        margin-right: 6px;
+        background-color: yellowgreen;
+        padding: 10px; /* aa padding change kariye to ena pramane *.odometer-value* ni padding pn adjust karvi...ny to issue aavse */
+    }
+    .number-counter-section .odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value{
+        padding: 12px 10px;
+    }
+    .number-counter-section .odometer .odometer-digit:last-child{
+        margin-right: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <section>
+        Scroll the page to show magic
+    </section>
+    <section class="number-counter-section">
+        <div class="progress">
+            <span class="odometer" id="odometer" data-count="578">000</span>
+            <span class="odometer" id="odometer1" data-count="789">000</span>
+        </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/odometer.js"></script>
+    <script src="js/general.js"></script>
+</body>
+
+</html>
